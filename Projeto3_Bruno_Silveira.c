@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-    //Prototipos
+    //Prototypes
 void recebe_valores(int*, int*, int, int);
 void bubble_sort_decrescente(int*, int);
 int remove_elemento(int*, int*);
@@ -9,22 +9,21 @@ void p_usados(int);
 int balanca(int, int*, int);
 int balanca_rec(int, int, int*, int);
 
-    //Variaveis globais
+    //Global variables
 int p_salva[20];
 int n_pesos=0;
 
-    //Funções
+    //Functions
 int main()  {
     int N, M, *prod, *pesos;
 
-    printf ("Digite os valores de N e M: ");
     scanf ("%d %d", &N, &M);
 
     pesos = (int*)malloc(M * sizeof(int));
     prod = (int*)malloc(N * sizeof(int));
 
-    recebe_valores(prod, pesos, M, N);  //Recebe os valores dos pesos e dos produtos
-    bubble_sort_decrescente(pesos, M);  //Organiza em ordem decrescente para possibilitar o funcionamento
+    recebe_valores(prod, pesos, M, N);  //Recieve the weights and products
+    bubble_sort_decrescente(pesos, M);  //Organize in descending order
 
     printf ("\n");
     for (int i=0; i<N; i++) {
